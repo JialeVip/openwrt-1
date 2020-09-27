@@ -69,7 +69,7 @@ dhcp_check() {
 
 	# If there's no carrier yet, skip this interface.
 	# The init script will be called again once the link is up
-	case "$(devstatus "$ifname" | jsonfilter -e @.carrier)" in
+	case "$(devstatus "$ifname" | jsonfilter -e @.up)" in
 		false) return 1;;
 	esac
 
