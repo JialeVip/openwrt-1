@@ -813,8 +813,6 @@ list_phy_interfaces() {
 }
 
 drv_mac80211_teardown() {
-	wireless_process_kill_all
-
 	json_select data
 	json_get_vars phy
 	json_select ..
